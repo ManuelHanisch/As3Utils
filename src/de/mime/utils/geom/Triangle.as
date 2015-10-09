@@ -43,7 +43,7 @@ package de.mime.utils.geom
 			
 			
 			if (pA != null && pB != null && pC != null) updatePoints(pA, pB, pC); // Side-Side-Side through Points
-			else if (isNaN(sa) && isNaN(sb) && isNaN(sc)) updateSides(sa, sb, sc); // Side-Side-Side
+			else if (!isNaN(sa) && !isNaN(sb) && !isNaN(sc)) updateSides(sa, sb, sc); // Side-Side-Side
 			else {
 				
 				//TODO:				
@@ -139,7 +139,22 @@ package de.mime.utils.geom
 		}
 		
 		
-		
+		public function toString():String {
+			
+			
+			var str:String = "Triangle: A(";			
+			A != null ? str += A.toString() : str += "-";			
+			str += ") B(";
+			B != null ? str += B.toString() : str += "-";	
+			str += ") C(";
+			C != null ? str += C.toString() : str += "-";	
+			
+			str += ") a("+a.toString()+") b("+b.toString()+") c("+c.toString()+") alpha("+alpha.toString()+") beta("+beta.toString()+") gamma("+gamma.toString()+")";
+			
+			return str;
+			
+			
+		}
 		
 		
 	}
