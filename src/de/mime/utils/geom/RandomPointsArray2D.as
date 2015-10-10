@@ -2,7 +2,7 @@ package de.mime.utils.geom
 {
 	
 	import de.mime.utils.ds.Array2D;
-	import de.polygonal.math.PM_PRNG;
+	import de.mime.utils.math.PM_PRNG;
 		
 	import flash.geom.Point;
 	
